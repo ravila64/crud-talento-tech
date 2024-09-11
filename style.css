@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 850px;   /* 600px*/
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+.actions button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.actions .edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.actions .delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.actions .active {
+    background-color: #c82eee;
+    color: #fff;
+}
+.actions .edit:hover {
+    background-color: #1436cc;
+}
+
+.actions .delete:hover {
+    background-color: #c82333;
+}
+
+#fecha{
+    background-color: #1c60dd;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+}
+
+.cont-logo{
+    width: 95%;
+    align-items: center;
+    /*justify-content: flex-start;
+    */justify-content: space-between;
+    display: flex;
+    border:2px solid #086fc9;
+    border-radius: 10px;
+    /* margin-bottom: 10px; */
+    margin: 5px 10px 5px 10px;
+}
+
+.logo{
+  /*background-color: #28a745; */
+   width: 180px;
+   margin-right: 20px;
+}
+
+.reg-personal{
+    font-size: 25px;
+    /* margin-right: 15px; */
+
+
+}
+

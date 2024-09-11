@@ -1,0 +1,45 @@
+//-- Migrations will appear here as you chat with AI
+
+// pagina
+https://studio.tailorbrands.com/boarding/124229814/offer
+
+
+// por favor copiar estos items faltantes
+// 1. logo.  ***
+// 2. no eliminar, colocar boton "Turno" color = Lorena
+// 3. manejar la validacion de email, que no repita  = Paula
+// 4. colocar en cameCase ** RENE 
+// 5. hacer el readme.md.  ** Jorge
+// 6. cambio de nombre o email, salga ventana modal, no utilizar prompt  ** David
+// 6. grabar datos localstorage ** RENE
+
+{
+  'id':121213,
+  'nombre':'juan',
+  'email':'juan@algo.com'
+}
+
+create table medicos (
+  id bigint primary key generated always as identity,
+  nombre text not null,
+  email text not null unique
+);
+
+alter table medicos
+add column fecha timestamp with time zone default now();
+
+alter table medicos
+alter column fecha
+set not null;
+
+alter table medicos
+add column activo boolean default true;
+
+
+// generador bases de datos gratis
+https://www.youtube.com/watch?v=QVpxZyI1Iqk
+//Este Generador de Bases de Datos GRATIS es una LOCURA
+
+pagina se llama
+https://postgres.new/db/ft8kw2xebieerdtk
+sign in con github
