@@ -19,9 +19,9 @@ function addMedico(nombre, email, fecha) {
         <td>${email}</td>
         <td>${fecha}</td>
         <td class="actions">
-            <button class="edit" onclick="editMedico(this)">Edit Name</button>
-            <button class="edit" onclick="editEmail(this)">Edit Email</button>
-            <button class="turno" onclick="turnoMedico(this)">Turno<button>
+            <button class="edit" onclick="editMedico(this)">Edit-Name</button>
+            <button class="edit" onclick="editEmail(this)">Edit-Email</button>
+            <button class="turno" onclick="turnoMedico(this)">Turno</button>
         </td>
     `;
   table.appendChild(row);
@@ -54,9 +54,10 @@ function editEmail(event) {
 }
 
 function turnoMedico(event) {
-  if (confirm("¿Seguro que deseas eliminar este registro?")) {
+  if (confirm("¿Médico termina turno?", "yes","No")) {
     const row = event.parentElement.parentElement;
-    row.remove();
+    // proceso de colorear fila y cambiar letrero y color del boton
+    // row.remove();
   }
 }
 
@@ -83,9 +84,12 @@ function converterToCamelCase(texto) {
 function displayDate() {
   let fDateTime = fechaHora();
   document.getElementById("fecha").innerHTML = fDateTime; //Date().toString();
-  document.getElementById("fecha").style.fontSize = "14px";
-  document.getElementById("fecha").style.color = "black";
+  document.getElementById("fecha").style.fontSize = "20px";
+  document.getElementById("fecha").style.color = "white";
+  document.getElementById("fecha").style.backgroundColor="blue";
+  document.getElementById("fecha").style.padding="15px";
 }
+
 function fechaHora(){
   let date = new Date().toString();
   console.log(date);

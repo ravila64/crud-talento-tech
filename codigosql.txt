@@ -11,7 +11,9 @@ https://studio.tailorbrands.com/boarding/124229814/offer
 // 4. colocar en cameCase ** RENE 
 // 5. hacer el readme.md.  ** Jorge
 // 6. cambio de nombre o email, salga ventana modal, no utilizar prompt  ** David
-// 6. grabar datos localstorage ** RENE
+// 7. grabar datos localstorage ** RENE
+// 8. si alcanza tiempo manejar filtros
+// 9. colocar el reloj que vaya cambiando cada 5 segundos, su hay tiempo
 
 {
   'id':121213,
