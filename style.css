@@ -78,21 +78,22 @@ th {
     color: #fff;
 }
 
-.actions .delete {
+.actions .turno{
     background-color: #dc3545;
     color: #fff;
 }
 
-.actions .active {
+/* .actions .active {
     background-color: #c82eee;
     color: #fff;
-}
+} */
+
 .actions .edit:hover {
     background-color: #1436cc;
 }
 
-.actions .delete:hover {
-    background-color: #c82333;
+.actions .turno:hover {
+    background-color: #23c84c;
 }
 
 #fecha{

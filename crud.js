@@ -21,8 +21,8 @@ function addMedico(nombre, email, fecha) {
         <td class="actions">
             <button class="edit" onclick="editMedico(this)">Edit Name</button>
             <button class="edit" onclick="editEmail(this)">Edit Email</button>
-            <button class="delete" onclick="deleteMedico(this)">Turno<button>
-          </td>
+            <button class="turno" onclick="turnoMedico(this)">Turno<button>
+        </td>
     `;
   table.appendChild(row);
 }
@@ -53,7 +53,7 @@ function editEmail(event) {
   }
 }
 
-function deleteMedico(event) {
+function turnoMedico(event) {
   if (confirm("¿Seguro que deseas eliminar este registro?")) {
     const row = event.parentElement.parentElement;
     row.remove();
