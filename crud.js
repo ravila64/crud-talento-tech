@@ -1,3 +1,5 @@
+import { appendFile } from 'fs';
+
 document.getElementById("medicoForm").addEventListener("submit", function (e) {
   e.preventDefault(); // hace que no se envie el form
   const nombre = document.getElementById("nombre").value;
@@ -5,10 +7,27 @@ document.getElementById("medicoForm").addEventListener("submit", function (e) {
   //const fechaRegistro = new Date().toDateString();
   let fDateTime = fechaHora();
   addMedico(nombre, email, fDateTime);
+  // agrega registro al archivo
+  datos.agregarRegistro(nombre,email,fecha);
   document.getElementById("nombre").value = "";
   document.getElementById("email").value = "";
 });
 
+
+// Función para agregar un registro al archivo
+function agregarRegistro(nombre, email, fecha) {
+  // Creamos la cadena de texto que se va a guardar
+  const registro = `Nombre: ${nombre}, Email: ${email}, Fecha: ${fecha}\n`;
+
+  // Usamos el método appendFile para agregar el registro al archivo
+  appendFile('datos.txt', registro, (err) => {
+      if (err) {
+          console.error('Error al escribir en el archivo:', err);
+      } else {
+          console.log('Registro agregado con éxito.');
+      }
+  });
+}
 
 function addMedico(nombre, email, fecha) {
   const table = document.getElementById("medicoList");
