@@ -1,86 +1,74 @@
-import { appendFile } from 'fs';
-
 document.getElementById("medicoForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // hace que no se envie el form
+  e.preventDefault(); // Evita que el formulario se envíe
   const nombre = document.getElementById("nombre").value;
   const email = document.getElementById("email").value;
-  //const fechaRegistro = new Date().toDateString();
-  let fDateTime = fechaHora();
+  let fDateTime = fechaHora(); // Fecha de registro
   addMedico(nombre, email, fDateTime);
-  // agrega registro al archivo
-  datos.agregarRegistro(nombre,email,fecha);
   document.getElementById("nombre").value = "";
   document.getElementById("email").value = "";
 });
 
-
-// Función para agregar un registro al archivo
-function agregarRegistro(nombre, email, fecha) {
-  // Creamos la cadena de texto que se va a guardar
-  const registro = `Nombre: ${nombre}, Email: ${email}, Fecha: ${fecha}\n`;
-
-  // Usamos el método appendFile para agregar el registro al archivo
-  appendFile('datos.txt', registro, (err) => {
-      if (err) {
-          console.error('Error al escribir en el archivo:', err);
-      } else {
-          console.log('Registro agregado con éxito.');
-      }
-  });
-}
+let currentRow; // Fila actual que se está editando
 
 function addMedico(nombre, email, fecha) {
   const table = document.getElementById("medicoList");
   const row = document.createElement("tr");
-  nombre = converterToCamelCase(nombre);
+
   row.innerHTML = `
         <td>${nombre}</td>
         <td>${email}</td>
         <td>${fecha}</td>
         <td class="actions">
-            <button class="edit" onclick="editMedico(this)">Edit-Name</button>
-            <button class="edit" onclick="editEmail(this)">Edit-Email</button>
+            <button class="edit" onclick="openModal(this)">Editar</button>
             <button class="turno" onclick="turnoMedico(this)">Turno</button>
         </td>
     `;
   table.appendChild(row);
 }
 
-function activeMedico(event) {}
-
-function editMedico(event) {
+function openModal(event) {
   const row = event.parentElement.parentElement;
-  let nombre = prompt(
-    "Edita el nombre del médico:",
-    row.children[0].textContent
-  );
- // nombre = converterToCamelCase(row.children[0].textContent);
-  nombre = converterToCamelCase(nombre);
-  if (nombre) {
-    row.children[0].textContent = nombre;
-  }
+  currentRow = row; // Guarda la fila actual
+
+  // Cargar los datos actuales en los campos de la ventana modal
+  document.getElementById("editNombre").value = row.children[0].textContent;
+  document.getElementById("editEmail").value = row.children[1].textContent;
+
+  // Mostrar la ventana modal
+  document.getElementById("editModal").style.display = "block";
 }
 
-function editEmail(event) {
-  const row = event.parentElement.parentElement;
-  let email = prompt(
-    "Edita el email del médico:",
-    row.children[1].textContent
-  );
-  if (email) {
-    row.children[1].textContent = email;
+document.getElementById("saveEditBtn").addEventListener("click", function () {
+  // Obtener los valores actualizados desde la ventana modal
+  const nuevoNombre = document.getElementById("editNombre").value;
+  const nuevoEmail = document.getElementById("editEmail").value;
+
+  // Validar el nuevo email
+  if (!validateEmail(nuevoEmail)) {
+    alert("Por favor ingrese un email válido.");
+    return;
   }
+
+  // Actualizar la fila con los nuevos valores
+  currentRow.children[0].textContent = converterToCamelCase(nuevoNombre);
+  currentRow.children[1].textContent = nuevoEmail;
+
+  // Cerrar la ventana modal
+  closeModal();
+});
+
+function closeModal() {
+  document.getElementById("editModal").style.display = "none";
 }
 
 function turnoMedico(event) {
-  if (confirm("¿Médico termina turno?", "yes","No")) {
+  if (confirm("¿Médico termina turno?")) {
     const row = event.parentElement.parentElement;
-    // proceso de colorear fila y cambiar letrero y color del boton
-    // row.remove();
+    row.style.backgroundColor = "#D3D3D3"; // Cambiar el color de la fila
   }
 }
 
-function converterToCamelCase(texto) {      
+function converterToCamelCase(texto) {
   let str = "";
   let blanco = false;
   for (let i = 0; i < texto.length; i++) {
@@ -97,23 +85,18 @@ function converterToCamelCase(texto) {
       }
     }
   }
-  return str; // imprime desde pos 1  str.slice(1)
+  return str;
 }
 
-function displayDate() {
-  let fDateTime = fechaHora();
-  document.getElementById("fecha").innerHTML = fDateTime; //Date().toString();
-  document.getElementById("fecha").style.fontSize = "20px";
-  document.getElementById("fecha").style.color = "white";
-  document.getElementById("fecha").style.backgroundColor="blue";
-  document.getElementById("fecha").style.padding="15px";
-}
-
-function fechaHora(){
+function fechaHora() {
   let date = new Date().toString();
-  console.log(date);
-  let pos=date.indexOf('GMT');
-  date = date.substring(0,pos);
-  console.log("fecha ", typeof date);
+  let pos = date.indexOf("GMT");
+  date = date.substring(0, pos);
   return date;
+}
+
+// Función para validar el formato del email
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
 }
