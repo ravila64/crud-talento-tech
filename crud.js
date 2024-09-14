@@ -19,7 +19,7 @@ function addMedico(nombre, email, fecha) {
         <td>${email}</td>
         <td>${fecha}</td>
         <td class="actions">
-            <button class="edit" onclick="openModal(this)">Editar</button>
+            <button class="edit" id="btn_edit" onclick="openModal(this)">Editar</button>
             <button class="turno" onclick="turnoMedico(this)">En turno</button>
         </td>
     `;
@@ -63,12 +63,26 @@ function closeModal() {
 
 function turnoMedico(event) {
   const row = event.parentElement.parentElement;
+  const button = event; // El botón clickeado
+  const turno = document.getElementById("btn_edit");
+
   if (confirm("¿Médico termina turno?")) {
-    row.style.backgroundColor = "#b3c7f7"; // Cambiar el color de la fila
-    // colocar texto en boton
+    // cambiar color fila
+    row.style.backgroundColor = "#77dbe2";
+    // Cambiar el texto del botón
+    button.textContent = "Turno Terminado";
+    // Cambiar el color del botón
+    button.style.backgroundColor = "#D3D3D3"; // Color gris claro
+    button.style.color = "#000"; // Texto en negro
+    // Desactivar el botón para que no se pueda volver a hacer clic
+    button.disabled = true;
+    btn_edit.disabled = true;
+    button.style.cursor='none';
+    btn_edit.style.cursor='none';
+    btn_edit.style.display = "none";
   }else{
     row.style.backgroundColor = "#f4f4f4";
-  }
+   }
 }
 
 // convierte el nombre a Camel Case
