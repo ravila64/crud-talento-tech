@@ -94,12 +94,13 @@ th {
     color:black;
 }
 
-h2 #fecha{
+/* desde js fecha en h2*/
+/* h2 #fecha{
     background-color: #1c60dd;
     padding: 12px;
     border-radius: 5px;
     color: white;
-}
+} */
 
 .cont-logo{
     width: 100%;
@@ -112,7 +113,7 @@ h2 #fecha{
 }
 
 .cont-fecha{
-    display: flex;
+    display: flexbox;
     justify-content: space-between;
 }
 
@@ -127,8 +128,8 @@ h2 #fecha{
     margin-right: 10px;
 }
 
-button .fecha{
-    color:white;
+.btn-fecha{
+    color: white;
     padding: 10px;
 }
 
