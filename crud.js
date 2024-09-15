@@ -27,12 +27,12 @@ function addMedico(nombre, email, fecha) {
 }
 
 function openModal(event) {
-  const row = event.parentElement.parentElement;
-  currentRow = row; // Guarda la fila actual
+  const rowModal = event.parentElement.parentElement;
+  currentRow = rowModal; // Guarda la fila actual
 
   // Cargar los datos actuales en los campos de la ventana modal
-  document.getElementById("editNombre").value = row.children[0].textContent;
-  document.getElementById("editEmail").value = row.children[1].textContent;
+  document.getElementById("editNombre").value = rowModal.children[0].textContent;
+  document.getElementById("editEmail").value = rowModal.children[1].textContent;
 
   // Mostrar la ventana modal
   document.getElementById("editModal").style.display = "block";
