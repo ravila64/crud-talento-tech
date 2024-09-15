@@ -64,7 +64,7 @@ function closeModal() {
 function turnoMedico(event) {
   const row = event.parentElement.parentElement;
   const button = event; // El botón clickeado
-  const turno = document.getElementById("btn_edit");
+  const btn_edit = document.getElementById("btn_edit");
 
   if (confirm("¿Médico termina turno?")) {
     // cambiar color fila
