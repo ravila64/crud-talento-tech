@@ -64,7 +64,7 @@ function closeModal() {
 function turnoMedico(event) {
   const row = event.parentElement.parentElement;
   const button = event; // El botón clickeado
-  const btn_edit = document.getElementById("btn_edit");
+  //const btn_edit = document.getElementById("btn_edit");
 
   if (confirm("¿Médico termina turno?")) {
     // cambiar color fila
@@ -76,10 +76,10 @@ function turnoMedico(event) {
     button.style.color = "#000"; // Texto en negro
     // Desactivar el botón para que no se pueda volver a hacer clic
     button.disabled = true;
-    btn_edit.disabled = true;
+    // btn_edit.disabled = true;
     button.style.cursor='none';
-    btn_edit.style.cursor='none';
-    btn_edit.style.display = "none";
+    // btn_edit.style.cursor='none';
+    // btn_edit.style.display = "none";
   }else{
     row.style.backgroundColor = "#f4f4f4";
    }
