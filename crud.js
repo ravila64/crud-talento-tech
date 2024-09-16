@@ -29,11 +29,9 @@ function addMedico(nombre, email, fecha) {
 function openModal(event) {
   const rowModal = event.parentElement.parentElement;
   currentRow = rowModal; // Guarda la fila actual
-
   // Cargar los datos actuales en los campos de la ventana modal
   document.getElementById("editNombre").value = rowModal.children[0].textContent;
   document.getElementById("editEmail").value = rowModal.children[1].textContent;
-
   // Mostrar la ventana modal
   document.getElementById("editModal").style.display = "block";
 }
@@ -42,17 +40,14 @@ document.getElementById("saveEditBtn").addEventListener("click", function () {
   // Obtener los valores actualizados desde la ventana modal
   const nuevoNombre = document.getElementById("editNombre").value;
   const nuevoEmail = document.getElementById("editEmail").value;
-
   // Validar el nuevo email
   if (!validateEmail(nuevoEmail)) {
     alert("Por favor ingrese un email válido.");
     return;
   }
-
   // Actualizar la fila con los nuevos valores
   currentRow.children[0].textContent = converterToCamelCase(nuevoNombre);
   currentRow.children[1].textContent = nuevoEmail;
-
   // Cerrar la ventana modal
   closeModal();
 });
