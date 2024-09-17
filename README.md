@@ -121,15 +121,17 @@ o con bases de datos relacionales, en un servidor XAMPP y una base de datos de M
 </html>
 ```
 
-## Despligue ##
-![Despliegue de la App]()
+## Despligue
+
+![Despliegue de la App](https://ravila64.github.io/crud-talento-tech/)
 
 ## Colaboradores
 
 * Yudi Lorena Cruz Taborda
-* Paula Castaño
+* Paula Katherine Castaño Rozo
 * Jorge Alberto Leal
-* David Santiago
+* David Santiago Montoya
 * Rene Avila Alonso
+  
   ##Sept, 2024 (R)##
     
