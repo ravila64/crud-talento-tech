@@ -58,29 +58,30 @@ function closeModal() {
 
 function turnoMedico(event) {
   const row = event.parentElement.parentElement;
-  console.log(" row ", row);
   const button = event; // El botón clickeado
-  //const btn_edit = document.getElementById("btn_edit");
-
+  
   if (confirm("¿Médico termina turno?")) {
-    // cambiar color fila
-    row.style.backgroundColor = "#8babf1";  // #77bde2
+    // Cambiar color de la fila
+    row.style.backgroundColor = "#77dbe2";
     // Cambiar el texto del botón
     button.textContent = "Turno Terminado";
     // Cambiar el color del botón
     button.style.backgroundColor = "#D3D3D3"; // Color gris claro
     button.style.color = "#000"; // Texto en negro
-    // Desactivar el botón para que no se pueda volver a hacer clic
+    // Desactivar el botón de turno para que no se pueda volver a hacer clic
     button.disabled = true;
-    //btn_edit.disabled = true;
-    button.style.cursor='none';
-    // btn_edit.style.cursor='none';
-    // btn_edit.style.display = "none";
-  }else{
+    button.style.cursor = 'none';
+    // Ocultar el botón de editar solo en la misma fila
+    const editButton = row.querySelector('.edit');
+    if (editButton) {
+      editButton.style.display = 'none';
+    }
+    
+  } else {
     row.style.backgroundColor = "#f4f4f4";
-   }
+  }
 }
-
+    
 // convierte el nombre a Camel Case
 function converterToCamelCase(texto) {
   let str = "";
