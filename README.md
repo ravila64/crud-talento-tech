@@ -30,9 +30,13 @@ Este proyecto es una aplicación web simple para registrar y gestionar el person
    - Se abrirá una ventana modal donde podrás modificar el nombre y el email.
    - Haz clic en "Guardar Cambios" para aplicar las modificaciones.
 ![](assets/pantalla2.jpeg)
-3. **Marcar a un médico como "En turno":**
+3. **Marcar a un médico como "Turno Terminado":**
    - Haz clic en el botón "En turno" de la fila correspondiente.
    - La fila se resaltará, y el botón de edición se ocultará, indicando que el médico está en turno.
+![](assets/pantalla4.jpeg)
+
+4. **Resultado final al manejar el crud**
+![](assets/pantalla5.jpeg)
 
 ## Código
 
@@ -94,6 +98,5 @@ Este proyecto es una aplicación web simple para registrar y gestionar el person
         </table>
     </div>
     <script src="./crud.js"></script>
-    <script src="./archivos.js"></script>
 </body>
 </html>
