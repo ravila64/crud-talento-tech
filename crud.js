@@ -2,13 +2,19 @@ document.getElementById("medicoForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Evita que el formulario se envíe
   const nombre = document.getElementById("nombre").value;
   const email = document.getElementById("email").value;
+  if (!isEmailUnique(email)) {
+    alert("El correo ya ha sido registrado. Por favor ingrese un correo diferente.");
+    return;
+  }
   let fDateTime = fechaHora(); // Fecha de registro
   addMedico(nombre, email, fDateTime);
   document.getElementById("nombre").value = "";
   document.getElementById("email").value = "";
+  // Verificar si el email ya está registrado
 });
 
 let currentRow; // Fila actual que se está editando
+let emailList = [];  // lista de corresos registrados
 
 function addMedico(nombre, email, fecha) {
   const table = document.getElementById("medicoList");
@@ -24,6 +30,13 @@ function addMedico(nombre, email, fecha) {
         </td>
     `;
   table.appendChild(row);
+   // Agregar el correo a la lista de correos registrados
+   emailList.push(email);
+}
+
+// Función para validar que el email sea único (no esté registrado previamente)
+function isEmailUnique(email) {
+  return !emailList.includes(email);
 }
 
 function openModal(event) {
@@ -43,6 +56,10 @@ document.getElementById("saveEditBtn").addEventListener("click", function () {
   // Validar el nuevo email
   if (!validateEmail(nuevoEmail)) {
     alert("Por favor ingrese un email válido.");
+    return;
+  }
+  if (!isEmailUnique(nuevoEmail)) {
+    alert("El correo ya ha sido registrado. Por favor ingrese un correo diferente.");
     return;
   }
   // Actualizar la fila con los nuevos valores
@@ -80,6 +97,7 @@ function turnoMedico(event) {
   } else {
     row.style.backgroundColor = "#f4f4f4";
   }
+ 
 }
     
 // convierte el nombre a Camel Case
@@ -127,3 +145,9 @@ function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(String(email).toLowerCase());
 }
+
+// Función para validar que el email sea único (no esté registrado previamente)
+function isEmailUnique(email) {
+  return !emailList.includes(email);
+}
+
