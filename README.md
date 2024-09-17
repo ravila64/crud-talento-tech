@@ -121,9 +121,9 @@ o con bases de datos relacionales, en un servidor XAMPP y una base de datos de M
 </html>
 ```
 
-## Despligue
+## Despliegue
 
-![Despliegue de la App](https://ravila64.github.io/crud-talento-tech/)
+![Despliegue App](https://ravila64.github.io/crud-talento-tech/)
 
 ## Colaboradores
 
