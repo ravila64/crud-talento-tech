@@ -28,9 +28,8 @@ Este proyecto es una aplicación web simple para registrar y gestionar el person
 2. **Editar los detalles de un médico:**
    - Haz clic en el botón "Editar" de la fila correspondiente.
    - Se abrirá una ventana modal donde podrás modificar el nombre y el email.
-
    - Haz clic en "Guardar Cambios" para aplicar las modificaciones.
-
+![](assets/pantalla2.jpeg)
 3. **Marcar a un médico como "En turno":**
    - Haz clic en el botón "En turno" de la fila correspondiente.
    - La fila se resaltará, y el botón de edición se ocultará, indicando que el médico está en turno.
