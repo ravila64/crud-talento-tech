@@ -1,5 +1,16 @@
-#CRUD TALENTO TECH
-# Registro de Personal Médico
+<h1 align="center">CRUD TALENTO TECH</h1>
+<h2 align="center">Registro de personal medico</h2>
+
+## Tabla de contenido 
+1. [Introducción](#introducción)
+2. [Característricas](#características)
+3. [Tecnologías utilizadas](#tecnologías-utilizadas)
+4. [Como usar la App](#como-usar-la-app)
+5. [Codigo](#código)
+6. [Despliegue](#despliegue)
+7. [Colaboradores](#colaboradores)
+   
+## Introducción
 
 Este proyecto es una aplicación web simple para registrar y gestionar el personal médico. Permite añadir, editar y marcar como "En turno" a los médicos. Además, proporciona la funcionalidad de editar los detalles de cada médico a través de una ventana modal.
 ![](assets/vital-app1.jpeg)
@@ -18,29 +29,37 @@ Este proyecto es una aplicación web simple para registrar y gestionar el person
 - CSS
 - JavaScript
 
-## Cómo Usar
+## Como usar la App
 
 1. **Registro de un médico:**
    - Introduce el nombre y el email del médico en el formulario y haz clic en "Registrar".
    - El médico se añadirá a la lista con la fecha y hora actuales.
-![](assets/pantalla0.jpeg)
+
+     ![](assets/pantalla0.jpeg)
 
 2. **Editar los detalles de un médico:**
    - Haz clic en el botón "Editar" de la fila correspondiente.
    - Se abrirá una ventana modal donde podrás modificar el nombre y el email.
    - Haz clic en "Guardar Cambios" para aplicar las modificaciones.
-![](assets/pantalla2.jpeg)
+
+     ![](assets/pantalla2.jpeg)
+
 3. **Marcar a un médico como "Turno Terminado":**
    - Haz clic en el botón "En turno" de la fila correspondiente.
    - La fila se resaltará, y el botón de edición se ocultará, indicando que el médico está en turno.
-![](assets/pantalla4.jpeg)
+
+   ![](assets/pantalla4.jpeg)
 
 4. **Resultado final al manejar el crud**
-![](assets/pantalla5.jpeg)
+
+   ![](assets/pantalla5.jpeg)
 
 ## Código
+El codigo que se utilizo fue el standard para HTML, CSS, JAVASCRIPT.
+Para versiones nuevas se manejarán archivos, en formato JSON, con MongoDb, 
+o con bases de datos relacionales, en un servidor XAMPP y una base de datos de MySql.
 
-### HTML
+## HTML ##
 
 ```html
 <!DOCTYPE html>
@@ -100,3 +119,9 @@ Este proyecto es una aplicación web simple para registrar y gestionar el person
     <script src="./crud.js"></script>
 </body>
 </html>
+
+## Código ##
+
+## Colaboradores
+
+
