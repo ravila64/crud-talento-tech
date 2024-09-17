@@ -56,3 +56,7 @@ sign in con github
 usuario Santiag328  davidboyaca@gmail.com
 usuario goyitoyoyo  joralbleaoso@gmail.com
 https://github.com/Goyitoyoyo
+
+
+insertar imagenes en readme.md
+![](https://github.com/ravila64/crud-talento-tech/blob/main/assets/logo-3.jpeg)
