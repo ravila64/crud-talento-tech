@@ -2,6 +2,7 @@
 # Registro de Personal Médico
 
 Este proyecto es una aplicación web simple para registrar y gestionar el personal médico. Permite añadir, editar y marcar como "En turno" a los médicos. Además, proporciona la funcionalidad de editar los detalles de cada médico a través de una ventana modal.
+![](assets/vital-app1.jpeg)
 
 ## Características
 
