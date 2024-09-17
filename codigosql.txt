@@ -64,3 +64,16 @@ insertar imagenes en readme.md
 assets/pantalla4.jpeg  medico termina turno, assets/pantalla4.jpeg
 assets/pantalla5.jpeg  turno terminado
 
+
+<h1 align="center">PERCUSSION WORLD MUSIC</h1>
+<h2 align="center">Tienda de instrumentos de percusión</h2>
+
+## Tabla de contenido 
+1. [Introducción](#introducción)
+2. [Estructura de la App](#estructura-de-la-app)
+3. [Visualización](#visualización)
+4. [Tecnologías](#tecnologías)
+5. [Codificación](#codificación)
+6. [Formas de pago](#formas-de-pago)
+7. [Despliegue](#despliegue)
+
