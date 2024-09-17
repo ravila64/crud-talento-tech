@@ -58,10 +58,10 @@ document.getElementById("saveEditBtn").addEventListener("click", function () {
     alert("Por favor ingrese un email válido.");
     return;
   }
-  if (!isEmailUnique(nuevoEmail)) {
-    alert("El correo ya ha sido registrado. Por favor ingrese un correo diferente.");
-    return;
-  }
+  // if (!isEmailUnique(nuevoEmail)) {
+  //   alert("El correo ya ha sido registrado. Por favor ingrese un correo diferente.");
+  //   return;
+  // }
   // Actualizar la fila con los nuevos valores
   currentRow.children[0].textContent = converterToCamelCase(nuevoNombre);
   currentRow.children[1].textContent = nuevoEmail;
