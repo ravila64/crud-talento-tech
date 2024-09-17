@@ -119,9 +119,17 @@ o con bases de datos relacionales, en un servidor XAMPP y una base de datos de M
     <script src="./crud.js"></script>
 </body>
 </html>
+```
 
-## Código ##
+## Despligue ##
+![Despliegue de la App]()
 
 ## Colaboradores
 
-
+* Yudi Lorena Cruz Taborda
+* Paula Castaño
+* Jorge Alberto Leal
+* David Santiago
+* Rene Avila Alonso
+  ##Sept, 2024 (R)##
+    
