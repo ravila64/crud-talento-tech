@@ -1,6 +1,7 @@
 #CRUD TALENTO TECH
 # Registro de Personal Médico
-<span> https://github.com/ravila64/crud-talento-tech/blob/main/assets/logo-3.jpeg </span>
+![](https://github.com/ravila64/crud-talento-tech/blob/main/assets/logo-3.jpeg)
+
 
 Este proyecto es una aplicación web simple para registrar y gestionar el personal médico. Permite añadir, editar y marcar como "En turno" a los médicos. Además, proporciona la funcionalidad de editar los detalles de cada médico a través de una ventana modal.
 
