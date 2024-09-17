@@ -60,3 +60,7 @@ https://github.com/Goyitoyoyo
 
 insertar imagenes en readme.md
 ![](https://github.com/ravila64/crud-talento-tech/blob/main/assets/logo-3.jpeg)
+
+assets/pantalla4.jpeg  medico termina turno, assets/pantalla4.jpeg
+assets/pantalla5.jpeg  turno terminado
+
