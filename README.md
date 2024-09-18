@@ -123,7 +123,7 @@ o con bases de datos relacionales, en un servidor XAMPP y una base de datos de M
 
 ## Despliegue
 
-[Despliegue](https://ravila64.github.io/crud-talento-tech/)
+[Ejecutar App](https://ravila64.github.io/crud-talento-tech/)
 
 ## Colaboradores
 
