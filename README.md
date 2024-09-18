@@ -133,5 +133,5 @@ o con bases de datos relacionales, en un servidor XAMPP y una base de datos de M
 * David Santiago Montoya
 * Rene Avila Alonso
   
-## Sept, 2024 (R) ##
+## Sept, 2024 &#169; ##
     
