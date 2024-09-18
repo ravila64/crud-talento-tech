@@ -42,7 +42,7 @@ Este proyecto es una aplicación web simple para registrar y gestionar el person
    - Se abrirá una ventana modal donde podrás modificar el nombre y el email.
    - Haz clic en "Guardar Cambios" para aplicar las modificaciones.
 
-     ![](assets/pantalla2.jpeg)
+     ![](assets/pantalla2.gif)
 
 3. **Marcar a un médico como "Turno Terminado":**
    - Haz clic en el botón "En turno" de la fila correspondiente.
@@ -123,7 +123,7 @@ o con bases de datos relacionales, en un servidor XAMPP y una base de datos de M
 
 ## Despliegue
 
-![Despliegue App](https://ravila64.github.io/crud-talento-tech/)
+[](https://ravila64.github.io/crud-talento-tech/)
 
 ## Colaboradores
 
@@ -133,5 +133,5 @@ o con bases de datos relacionales, en un servidor XAMPP y una base de datos de M
 * David Santiago Montoya
 * Rene Avila Alonso
   
-  ##Sept, 2024 (R)##
+## Sept, 2024 (R) ##
     
